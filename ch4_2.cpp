@@ -7,6 +7,12 @@ using namespace std;
 
 
 int main(){
+
+       char tryAgain = 'y';
+
+    while(tryAgain=='y'){
+
+
    double HeightInInches ;
 double WeightInPounds;
    int ageInYears;
@@ -20,8 +26,12 @@ double WeightInPounds;
    cout<<"enter Age in years : ";
    cin>>ageInYears;
   ClothingSize(HeightInInches, WeightInPounds, ageInYears);
-    
+cout << "Do you wnt conitnue - " << endl;
+        cin >> tryAgain;
+
+    }
    return 0;
+
 }
 //Defining the function sum
  void ClothingSize(double Hi, double We, int ag) {
