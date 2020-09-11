@@ -5,15 +5,41 @@ using namespace std;
 
 
 int main() {
-    int words = 0;
-    string word;
-   // ifstream inFile;
-    
-    ofstream examplefile ("example.txt");
-  if (examplefile.is_open())
-  {
-    examplefile << "This is a line.\n";
-    examplefile << "This is another line.\n";
-    examplefile.close();
+   char buffer[256];
+   string filename;
+ int wordC=0;
+  char ch;
+   cin>>filename;
+  ifstream examplefile (filename);
+  if (! examplefile.is_open())
+  { cout << "Error opening file"; exit (1); 
   }
-  return 0;}
+
+  while (! examplefile.eof() )
+  {
+    examplefile.getline (buffer,100);
+    cout << buffer << endl;
+   // ++words;
+   // cout<<words;
+    wordC++;
+  }
+  int Num = 0;      
+    char prev = ' ';
+
+   /*  for(int i = 0; i < strlen(buffer); i++) {
+
+        if(buffer[i] != ' ' && prev == ' ')
+         Num++;
+
+        prev = buffer[i];
+    }
+    cout<<"words : "<<Num<<endl ; */
+    string word; 
+  /*  while (examplefile >>word)
+{
+  wordC++;
+}
+ cout<<wordC<<endl; */
+cout<<wordC<<endl;
+  return 0;
+  }
