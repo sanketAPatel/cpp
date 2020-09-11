@@ -5,10 +5,21 @@ void sum(int);
 
 //Main function
 int main(){
+     char tryAgain = 'y';
+
+    while(tryAgain=='y'){
+
+
   int number;
   cout<<"Enter total cents bellow 100:-  ";
    cin>>number;
    sum(number);
+
+cout << "\n Do you wnt conitnue y - " << endl;
+        cin >> tryAgain;
+
+    }
+
    return 0;
 }
 /* Function is defined after the main method 
